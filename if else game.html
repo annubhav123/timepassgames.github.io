@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>timepass games</title>
+</head>
+<style type="text/css">
+#center{
+margin:0 auto;
+background-color:#ff9999;
+width:200px;
+height:300px;
+padding-bottom:150px;
+padding-left:100px;
+padding-right:100px;
+padding-top:150px;
+border:35px #003329 dashed;
+}
+#checkguess{
+background-color:#ccffff;
+}
+</style>
+<body style="background-image: url('images/one.png');">
+<div id="center">
+<p><h2 style="color:blue"><u> guess the number game 👌</u></h2></p>
+<h2><p>Tell me which number i am thinking between 0 to 10</p></h2>
+<p><input type="number" min="0" max="10" id="guess"><h2><button id="checkguess" >Guess!</button></p><h2>
+<script type="text/javascript">
+document.getElementById("checkguess").onclick = function() {
+
+var randomNumber = Math.random();
+randomNumber = randomNumber * 11;
+randomNumber = Math.floor(randomNumber);
+if  (document.getElementById("guess").value == randomNumber){
+alert("well done! 👍👍");
+} else
+{alert("😢😢it was"	 +  randomNumber);
+}
+}
+</script>
+</div>
+</body>
+</html>
